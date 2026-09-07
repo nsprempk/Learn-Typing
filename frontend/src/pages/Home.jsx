@@ -5,10 +5,9 @@ import {
   Trophy,
   BookOpen,
 } from "lucide-react";
-import SEO from "../components/SEO";
-
 import { Link } from "react-router-dom";
 
+import SEO from "../components/SEO";
 import { useAuth } from "../context/AuthContext";
 
 export default function Home() {
@@ -17,10 +16,12 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Free Typing Test & Practice"
-        description="Improve your typing speed and accuracy with free online typing tests, typing practice, lessons, quizzes, and daily progress tracking."
+        title="Free Typing Test & Learn Typing Online"
+        description="Learn typing online with free typing tests, typing lessons, typing quizzes, and daily progress tracking. Improve your typing speed, accuracy, and confidence."
         path="/"
+        keywords="learn typing, typing test, typing practice, online typing test, typing speed test, improve typing speed, typing lessons, typing quiz"
       />
+
       <section className="overflow-hidden">
         <div className="page-container">
           <div className="grid min-h-[650px] items-center gap-12 py-20 lg:grid-cols-2">
@@ -31,14 +32,15 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 text-5xl font-black tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-                Type faster.
+                Learn typing.
                 <br />
-                <span className="gradient-text">Learn smarter.</span>
+                <span className="gradient-text">Type faster.</span>
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-                Build real typing skills with timed tests, interactive lessons,
-                typing quizzes, and detailed progress tracking.
+                Learn typing online with free typing tests, interactive lessons,
+                typing quizzes, and detailed progress tracking. Practice
+                regularly and improve your typing speed and accuracy.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -57,7 +59,7 @@ export default function Home() {
                   to={isAuthenticated ? "/learn" : "/login"}
                   className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
                 >
-                  Explore Lessons
+                  Explore Typing Lessons
                 </Link>
               </div>
             </div>
@@ -90,9 +92,7 @@ export default function Home() {
 
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   <MiniStat label="WPM" value="67" />
-
                   <MiniStat label="Accuracy" value="98%" />
-
                   <MiniStat label="Streak" value="7 🔥" />
                 </div>
               </div>
@@ -107,31 +107,31 @@ export default function Home() {
             <p className="font-semibold text-blue-600">EVERYTHING YOU NEED</p>
 
             <h2 className="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl">
-              Become a better typist
+              Everything you need to improve your typing
             </h2>
 
             <p className="mt-4 text-slate-500">
-              Practice with purpose and see your skills improve over time.
+              Practice with purpose and track your typing progress over time.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <Feature
               icon={Keyboard}
-              title="Typing Tests"
-              text="Measure WPM, CPM, accuracy and errors with realistic typing tests."
+              title="Free Typing Tests"
+              text="Measure your words per minute, characters per minute, accuracy, and typing errors with realistic typing tests."
             />
 
             <Feature
               icon={BookOpen}
-              title="Learn Typing"
-              text="Follow structured lessons from home-row basics to complete sentences."
+              title="Typing Lessons"
+              text="Learn touch typing step by step, from home-row basics to letters, words, sentences, and advanced practice."
             />
 
             <Feature
               icon={BarChart3}
-              title="Track Progress"
-              text="Monitor your daily practice, streaks, speed and accuracy."
+              title="Track Your Progress"
+              text="Monitor your daily typing practice, speed, accuracy, personal records, and learning streaks."
             />
           </div>
         </div>
@@ -145,12 +145,12 @@ export default function Home() {
                 <Trophy className="text-yellow-400" size={40} />
 
                 <h2 className="mt-5 text-3xl font-black">
-                  Make typing a daily habit.
+                  Make typing a daily habit
                 </h2>
 
                 <p className="mt-4 leading-7 text-slate-300">
-                  Earn achievements, build streaks and challenge yourself to
-                  beat your personal best.
+                  Practice every day, earn achievements, build typing streaks,
+                  and challenge yourself to beat your personal best.
                 </p>
               </div>
 
@@ -164,6 +164,39 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="pb-20">
+        <div className="page-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white">
+              Start your typing practice today
+            </h2>
+
+            <p className="mt-4 leading-7 text-slate-500">
+              Whether you are a beginner learning touch typing or an experienced
+              typist looking to improve your speed and accuracy, Learn Typing
+              gives you the tools to practice and measure your progress.
+            </p>
+
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                to={isAuthenticated ? "/typing-test" : "/signup"}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 font-semibold text-white hover:bg-blue-700"
+              >
+                Start Typing Practice
+                <ArrowRight size={18} />
+              </Link>
+
+              <Link
+                to={isAuthenticated ? "/learn" : "/signup"}
+                className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3.5 font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200"
+              >
+                Learn Touch Typing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
@@ -172,6 +205,7 @@ function MiniStat({ label, value }) {
   return (
     <div className="rounded-xl bg-white p-3 text-center dark:bg-slate-900">
       <p className="text-xs text-slate-500">{label}</p>
+
       <p className="mt-1 font-bold text-slate-900 dark:text-white">{value}</p>
     </div>
   );
