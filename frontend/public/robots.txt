@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /progress
+Disallow: /history
+Disallow: /settings
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://learntyping.site/sitemap.xml
