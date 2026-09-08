@@ -10,21 +10,24 @@ export default function Learn() {
   return (
     <>
       <SEO
-        title="Learn Touch Typing"
-        description="Learn touch typing step by step with typing lessons, practice exercises, typing quizzes, and accuracy training."
+        title="Learn Touch Typing Online"
+        description="Learn touch typing online with structured typing lessons and practice exercises. Improve your typing accuracy, finger placement, speed, and confidence from beginner to advanced."
         path="/learn"
+        keywords="learn touch typing, typing lessons, touch typing lessons, typing practice, learn typing online, typing exercises, beginner typing lessons"
       />
+
       <div className="page-container py-10">
         <div>
           <p className="text-sm font-semibold text-blue-600">LEARN TYPING</p>
 
           <h1 className="mt-1 text-3xl font-black text-slate-900 dark:text-white">
-            Build your typing skills
+            Learn Touch Typing Online
           </h1>
 
           <p className="mt-2 max-w-2xl text-slate-500">
-            Follow structured lessons and gradually move from individual keys to
-            fluent sentence typing.
+            Learn touch typing step by step with structured lessons and practice
+            exercises. Start with individual keys and gradually develop
+            accurate, comfortable, and fluent typing skills.
           </p>
         </div>
 
@@ -48,9 +51,9 @@ export default function Learn() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white">
+                  <h2 className="font-bold text-slate-900 dark:text-white">
                     Typing Course
-                  </h3>
+                  </h2>
 
                   <p className="text-xs text-slate-500">Beginner to advanced</p>
                 </div>
@@ -62,15 +65,28 @@ export default function Learn() {
             </div>
 
             <div className="rounded-2xl bg-blue-600 p-6 text-white">
-              <p className="text-sm font-semibold text-blue-100">TIP</p>
+              <p className="text-sm font-semibold text-blue-100">TYPING TIP</p>
 
               <p className="mt-2 text-lg font-bold">
                 Focus on accuracy before speed.
               </p>
 
               <p className="mt-2 text-sm leading-6 text-blue-100">
-                Speed naturally improves as your fingers learn where each key
-                is.
+                Practice correct finger placement and consistent typing
+                technique. Your speed will naturally improve as your fingers
+                learn where each key is.
+              </p>
+            </div>
+
+            <div className="card p-6">
+              <h2 className="font-bold text-slate-900 dark:text-white">
+                Why learn touch typing?
+              </h2>
+
+              <p className="mt-3 text-sm leading-6 text-slate-500">
+                Touch typing helps you type without constantly looking at the
+                keyboard. Regular practice can improve typing speed, accuracy,
+                efficiency, and confidence for everyday computer work.
               </p>
             </div>
           </div>

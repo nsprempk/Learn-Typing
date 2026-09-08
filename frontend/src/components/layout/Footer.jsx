@@ -12,7 +12,7 @@ export default function Footer() {
             {" "}
             <p className="font-semibold text-slate-900 dark:text-white">
               {" "}
-              TypeMaster{" "}
+              LearnTyping{" "}
             </p>{" "}
             <p className="mt-1 text-sm text-slate-500">
               {" "}
