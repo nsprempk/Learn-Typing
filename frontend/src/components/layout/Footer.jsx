@@ -53,7 +53,7 @@ export default function Footer() {
           {" "}
           <p className="text-sm text-slate-500">
             {" "}
-            © {new Date().getFullYear()} TypeMaster. All rights reserved.{" "}
+            © {new Date().getFullYear()} LearnTyping. All rights reserved.{" "}
           </p>{" "}
         </div>{" "}
       </div>{" "}
