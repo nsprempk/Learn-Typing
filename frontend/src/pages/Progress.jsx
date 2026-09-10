@@ -1,6 +1,7 @@
 import { CalendarDays, Clock3, Target, Trophy, Zap } from "lucide-react";
 
 import Card from "../components/common/Card";
+import SEO from "../components/SEO";
 
 import ProgressChart from "../components/dashboard/ProgressChart";
 import ActivityChart from "../components/dashboard/ActivityChart";
